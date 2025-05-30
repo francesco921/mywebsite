@@ -2,64 +2,136 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>La Mia Pagina Colorata</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio di Consulenza Ambientale</title>
   <style>
     body {
-      background: linear-gradient(135deg, #f5a623, #f76b1c);
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 20px 0;
       text-align: center;
-      padding: 50px;
     }
 
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
     }
 
-    p {
-      font-size: 1.2em;
-      margin-bottom: 40px;
+    nav {
+      background-color: #34495e;
+      text-align: center;
+    }
+
+    nav a {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #2c3e50;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 20px;
     }
 
     .button {
       display: inline-block;
-      margin: 10px;
-      padding: 15px 30px;
-      font-size: 1em;
-      color: #fff;
-      background-color: #4CAF50;
-      border: none;
-      border-radius: 5px;
+      background-color: #27ae60;
+      color: white;
+      padding: 12px 25px;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      border-radius: 5px;
+      margin-top: 15px;
+      transition: background-color 0.3s;
     }
 
     .button:hover {
-      background-color: #45a049;
+      background-color: #219150;
     }
 
-    .button.google {
-      background-color: #4285F4;
-    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
 
-    .button.google:hover {
-      background-color: #357ae8;
-    }
-
-    .button.openai {
-      background-color: #1a1a1a;
-    }
-
-    .button.openai:hover {
-      background-color: #000000;
+      nav a {
+        display: block;
+        padding: 10px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Ciao KWANG!</h1>
-  <p>Questa è una pagina HTML colorata con pulsanti che ti portano a Google e OpenAI.</p>
-  <a href="https://www.google.com" class="button google" target="_blank">Vai su Google</a>
-  <a href="https://www.openai.com" class="button openai" target="_blank">Vai su OpenAI</a>
+  <header>
+    <h1>Studio di Consulenza Ambientale</h1>
+  </header>
+
+  <nav>
+    <a href="#chi-siamo">Chi Siamo</a>
+    <a href="#servizi">Servizi</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+
+  <main>
+    <section id="chi-siamo">
+      <h2>Chi Siamo</h2>
+      <p>
+        Siamo un team di esperti in consulenza ambientale dedicati a supportare aziende e privati nel raggiungimento degli standard di sostenibilità. Lavoriamo per garantire il rispetto delle normative ambientali e promuovere pratiche ecologiche responsabili.
+      </p>
+    </section>
+
+    <section id="servizi">
+      <h2>Servizi Offerti</h2>
+      <ul>
+        <li>Valutazione d'impatto ambientale (VIA)</li>
+        <li>Consulenza su sostenibilità e riduzione emissioni</li>
+        <li>Certificazioni ambientali ISO 14001</li>
+        <li>Monitoraggio ambientale e analisi</li>
+        <li>Formazione e sensibilizzazione ambientale</li>
+      </ul>
+      <a href="#contatti" class="button">Richiedi una Consulenza</a>
+    </section>
+
+    <section id="contatti">
+      <h2>Contatti</h2>
+      <p>
+        📧 Email: <a href="mailto:info@studioconsulenza.it">info@studioconsulenza.it</a><br>
+        ☎️ Telefono: +39 0123 456789<br>
+        📍 Indirizzo: Via Ambiente 123, Milano
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Studio di Consulenza Ambientale. Tutti i diritti riservati.
+  </footer>
 </body>
 </html>
