@@ -1,59 +1,213 @@
-/* NAVBAR BASE */
+/* Reset base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #333;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1F3B28;
+  text-align: center;
+  padding: 15px 20px 5px 20px;  /* Ridotto il padding inferiore */
+}
+
+header img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
 nav {
   background-color: #1F3B28;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  padding: 5px 0;
-  position: relative;
+  padding-top: 5px;  /* Ridotto lo spazio sopra i link */
 }
 
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.nav-links a {
+nav a {
   color: #ffffff;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 10px 15px;  /* Leggermente più compatto */
+  display: block;
   transition: background-color 0.3s;
 }
 
-.nav-links a:hover {
+nav a:hover {
   background-color: #16371f;
 }
 
-/* HAMBURGER ICON */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(31, 59, 40, 0.6), rgba(31, 59, 40, 0.6)), url('hero-image.jpg') center/cover no-repeat;
   color: white;
-  cursor: pointer;
-  padding: 10px 15px;
+  text-align: center;
+  padding: 100px 20px;
 }
 
-/* RESPONSIVE NAVBAR */
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 40px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #1F3B28;
+}
+
+/* Services */
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  flex: 1 1 300px;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+}
+
+.service-card h3 {
+  margin: 15px;
+  color: #1F3B28;
+  font-size: 1.2rem;
+}
+
+.service-card p {
+  margin: 0 15px 15px;
+  font-size: 0.95rem;
+  color: #555555;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  background-color: #7BAE7F;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #689c6b;
+}
+
+/* Testimonial */
+.testimonial {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+  background-color: #1F3B28;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* Responsive Fixes */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  header img {
+    max-width: 150px;
   }
 
-  .nav-links {
-    display: none;
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .services {
     flex-direction: column;
-    width: 100%;
-    background-color: #1F3B28;
+    align-items: center;
   }
 
-  .nav-links a {
+  .service-card {
+    flex: 1 1 100%;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 12px;
     text-align: center;
-    border-top: 1px solid #16371f;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 15px;
   }
 
-  .nav-links.active {
-    display: flex;
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
   }
 }
