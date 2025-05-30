@@ -12,22 +12,17 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
-  background-color: #1F3B28;  /* Colore header uguale al logo sfondo */
-  color: #ffffff;
-  padding: 20px;
+  background-color: #1F3B28;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+  padding: 20px;
 }
 
 header img {
   height: 120px;  /* Logo più grande */
   width: auto;
 }
+
 
 header h1 {
   font-size: 2rem;
