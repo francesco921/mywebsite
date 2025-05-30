@@ -16,11 +16,11 @@ body {
 header {
   background-color: #1F3B28;
   text-align: center;
-  padding: 20px;
+  padding: 10px 20px;  /* logo più vicino alla navbar */
 }
 
 header img {
-  height: 120px;  /* Logo più grande */
+  height: 120px;
   width: auto;
 }
 
@@ -31,7 +31,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 5px 0;
+  padding: 3px 0;  /* più compatto e simmetrico */
   position: relative;
 }
 
@@ -44,7 +44,7 @@ nav {
 .nav-links a {
   color: #ffffff;
   text-decoration: none;
-  padding: 10px 15px;
+  padding: 8px 15px;  /* più simmetrico */
   transition: background-color 0.3s;
 }
 
@@ -58,7 +58,7 @@ nav {
   font-size: 28px;
   color: white;
   cursor: pointer;
-  padding: 10px 15px;
+  padding: 5px 15px;  /* più simmetrico */
 }
 
 /* Hero Section */
