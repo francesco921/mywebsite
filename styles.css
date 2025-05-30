@@ -12,56 +12,72 @@ body {
   line-height: 1.6;
 }
 
+/* Header */
 header {
   background-color: #1F3B28;
   text-align: center;
-  padding: 15px 20px 5px 20px;  /* Ridotto il padding inferiore */
+  padding: 20px;
 }
 
 header img {
-  max-width: 200px;
-  width: 100%;
-  height: auto;
+  height: 120px;  /* Logo più grande */
+  width: auto;
 }
 
+/* Navbar */
 nav {
   background-color: #1F3B28;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  padding-top: 5px;  /* Ridotto lo spazio sopra i link */
+  padding: 5px 0;
+  position: relative;
 }
 
-nav a {
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-links a {
   color: #ffffff;
   text-decoration: none;
-  padding: 10px 15px;  /* Leggermente più compatto */
-  display: block;
+  padding: 10px 15px;
   transition: background-color 0.3s;
 }
 
-nav a:hover {
+.nav-links a:hover {
   background-color: #16371f;
 }
 
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+}
 
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(31, 59, 40, 0.6), rgba(31, 59, 40, 0.6)), url('hero-image.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
 }
 
 .hero h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 15px;
 }
 
 .hero p {
   max-width: 600px;
   margin: 0 auto;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 /* Container */
@@ -73,13 +89,13 @@ nav a:hover {
 
 /* Sections */
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .section h2 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #1F3B28;
 }
 
@@ -88,7 +104,7 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .service-card {
@@ -96,9 +112,9 @@ nav a:hover {
   border: 1px solid #dddddd;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
   flex: 1 1 300px;
   transition: transform 0.3s;
-  overflow: hidden;
 }
 
 .service-card:hover {
@@ -113,7 +129,7 @@ nav a:hover {
 .service-card h3 {
   margin: 15px;
   color: #1F3B28;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .service-card p {
@@ -127,11 +143,10 @@ nav a:hover {
   display: inline-block;
   background-color: #7BAE7F;
   color: white;
-  padding: 12px 25px;
+  padding: 12px 30px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
-  margin-top: 20px;
   transition: background-color 0.3s;
 }
 
@@ -139,17 +154,16 @@ nav a:hover {
   background-color: #689c6b;
 }
 
-/* Testimonial */
+/* Testimonials (optional) */
 .testimonial {
   background-color: #f9f9f9;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   font-style: italic;
-  font-size: 0.95rem;
 }
 
 /* Footer */
@@ -157,57 +171,51 @@ footer {
   background-color: #1F3B28;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   margin-top: 40px;
 }
 
-/* Responsive Fixes */
+/* Responsive */
 @media (max-width: 768px) {
   header img {
-    max-width: 150px;
+    height: 80px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #1F3B28;
+  }
+
+  .nav-links a {
+    text-align: center;
+    border-top: 1px solid #16371f;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .hero {
-    padding: 60px 20px;
+    padding: 80px 20px;
+    background-size: cover;
   }
 
   .hero h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   .hero p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .services {
     flex-direction: column;
     align-items: center;
-  }
-
-  .service-card {
-    flex: 1 1 100%;
-  }
-
-  nav {
-    flex-direction: column;
-  }
-
-  nav a {
-    padding: 12px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 40px 15px;
-  }
-
-  .hero h2 {
-    font-size: 1.4rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
   }
 }
