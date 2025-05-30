@@ -12,6 +12,7 @@ body {
   line-height: 1.6;
 }
 
+/* Header */
 header {
   background-color: #1F3B28;
   text-align: center;
@@ -19,16 +20,12 @@ header {
 }
 
 header img {
-  height: 120px;  /* Logo più grande */
-  width: auto;
+  max-width: 200px;   /* Logo ridimensionabile su mobile */
+  width: 100%;
+  height: auto;
 }
 
-
-header h1 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
+/* Navbar */
 nav {
   background-color: #1F3B28;
   display: flex;
@@ -36,11 +33,11 @@ nav {
   flex-wrap: wrap;
 }
 
-
 nav a {
   color: #ffffff;
   text-decoration: none;
   padding: 15px 20px;
+  display: block;
   transition: background-color 0.3s;
 }
 
@@ -53,18 +50,18 @@ nav a:hover {
   background: linear-gradient(rgba(31, 59, 40, 0.6), rgba(31, 59, 40, 0.6)), url('hero-image.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
-  padding: 120px 20px;
+  padding: 100px 20px;
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 15px;
 }
 
 .hero p {
   max-width: 600px;
   margin: 0 auto;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* Container */
@@ -76,13 +73,13 @@ nav a:hover {
 
 /* Sections */
 .section {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .section h2 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #1F3B28;
 }
 
@@ -91,7 +88,7 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .service-card {
@@ -99,9 +96,9 @@ nav a:hover {
   border: 1px solid #dddddd;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  overflow: hidden;
   flex: 1 1 300px;
   transition: transform 0.3s;
+  overflow: hidden;
 }
 
 .service-card:hover {
@@ -116,7 +113,7 @@ nav a:hover {
 .service-card h3 {
   margin: 15px;
   color: #1F3B28;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .service-card p {
@@ -128,12 +125,13 @@ nav a:hover {
 /* Button */
 .button {
   display: inline-block;
-  background-color: #7BAE7F;  /* Verde chiaro coerente con il logo */
+  background-color: #7BAE7F;
   color: white;
-  padding: 12px 30px;
+  padding: 12px 25px;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
+  margin-top: 20px;
   transition: background-color 0.3s;
 }
 
@@ -141,16 +139,17 @@ nav a:hover {
   background-color: #689c6b;
 }
 
-/* Testimonials (optional) */
+/* Testimonial */
 .testimonial {
   background-color: #f9f9f9;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   font-style: italic;
+  font-size: 0.95rem;
 }
 
 /* Footer */
@@ -158,29 +157,57 @@ footer {
   background-color: #1F3B28;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   margin-top: 40px;
 }
 
-/* Responsive */
+/* Responsive Fixes */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-    text-align: center;
+  header img {
+    max-width: 150px;
   }
 
   .hero {
-    padding: 80px 20px;
+    padding: 60px 20px;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
   }
 
   .services {
     flex-direction: column;
     align-items: center;
+  }
+
+  .service-card {
+    flex: 1 1 100%;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 15px;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
   }
 }
