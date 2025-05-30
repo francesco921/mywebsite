@@ -29,13 +29,13 @@ header h1 {
   font-weight: 600;
 }
 
-/* Navbar */
 nav {
-  background-color: #1F3B28;  /* Stesso colore header/logo background */
+  background-color: #1F3B28;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
+
 
 nav a {
   color: #ffffff;
