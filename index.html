@@ -82,7 +82,6 @@
       width: 60px;
       height: 60px;
       text-align: center;
-      font-size: 30px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
       z-index: 100;
       animation: bounce 2s infinite;
@@ -92,6 +91,13 @@
 
     .whatsapp-float:hover {
       background-color: #20b354;
+    }
+
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      fill: white;
     }
 
     @keyframes bounce {
@@ -109,9 +115,6 @@
       }
     }
   </style>
-
-  <!-- Font Awesome CDN for WhatsApp icon -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -152,7 +155,9 @@
 
   <!-- WhatsApp Floating Icon -->
   <a href="https://wa.me/393337836402" class="whatsapp-float" target="_blank" aria-label="Chatta con noi su WhatsApp">
-    <i class="fab fa-whatsapp"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path d="M380.9 97.1C339-1.5 253.4-34.3 172.6 9.6c-45.2 24.5-75.9 64.1-89 113.7-11.7 43.6-6.7 88.8 14.3 127.9L24 464l143.5-76.3c37.7 19.6 80.5 27.6 122.1 21.7 48.7-7.1 91.9-35.7 118.1-76.9 26.2-41.2 34.3-90.8 21.4-137.2-11.2-40.3-40.8-74.1-76.2-97.2zM238.3 385c-33.5 0-66.3-9.8-94.4-28.4l-6.7-4.2-85.2 45 17.9-93.5-4.3-6.9c-15.6-25.1-23.6-54.2-23.6-83.6 0-84.8 69-153.8 153.8-153.8 41 0 79.4 16 108.2 45 28.8 29 44.8 67.2 44.8 108.1.1 84.7-69 153.7-153.7 153.7zm85.1-118.7c-4.6-2.3-27.3-13.5-31.5-15-4.2-1.5-7.3-2.3-10.4 2.3-3.1 4.6-11.9 15-14.6 18.1-2.7 3.1-5.4 3.4-10 1.1-27.2-13.6-45-24.3-63.3-55.2-4.8-8.3 4.8-7.7 13.6-25.6 1.5-3.1.8-5.7-.4-8-1.2-2.3-10.4-25-14.2-34.1-3.7-8.8-7.4-7.6-10.4-7.7-2.7-.1-5.7-.1-8.8-.1s-8 1.1-12.1 5.7c-4.2 4.6-16 15.6-16 38 0 22.3 16.4 43.7 18.7 46.7 2.3 3.1 32.2 49.1 78.2 68.8 10.9 4.7 19.4 7.5 26.1 9.6 10.9 3.4 20.8 2.9 28.7 1.7 8.8-1.3 27.3-11.2 31.2-22 3.8-10.9 3.8-20.2 2.7-22.1-1-1.9-4.2-3-8.8-5.3z"/>
+    </svg>
   </a>
 
   <footer>
