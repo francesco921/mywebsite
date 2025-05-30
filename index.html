@@ -4,126 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Studio di Consulenza Ambientale</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      color: #333;
-      background-color: #ffffff;
-    }
-
-    header {
-      background-color: #2c3e50;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    nav {
-      background-color: #34495e;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 15px 20px;
-      display: block;
-      transition: background-color 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #2c3e50;
-    }
-
-    .hero {
-      background: url('hero-image.jpg') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .hero h2 {
-      font-size: 2rem;
-      margin: 0 0 20px;
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #2c3e50;
-    }
-
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .service-card {
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      flex: 1 1 300px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .service-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .service-card h3 {
-      margin-top: 15px;
-      color: #2c3e50;
-    }
-
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        padding: 60px 20px;
-      }
-      .services {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <header>
     <h1>Studio di Consulenza Ambientale</h1>
   </header>
@@ -138,8 +21,8 @@
 
   <section class="hero">
     <h2>Soluzioni Ambientali Innovative</h2>
-    <p>Aiutiamo le aziende a rispettare le normative ambientali e a migliorare la sostenibilità delle proprie attività.</p>
-    <a href="#" style="background:#27ae60; padding: 10px 20px; border-radius:5px; color:white; text-decoration:none; display:inline-block; margin-top:20px;">Contattaci Ora</a>
+    <p>Supportiamo le aziende nel rispetto delle normative ambientali e nello sviluppo sostenibile.</p>
+    <a href="#" class="button">Contattaci Ora</a>
   </section>
 
   <main class="container">
@@ -147,20 +30,29 @@
       <h2>I Nostri Servizi</h2>
       <div class="services">
         <div class="service-card">
-          <img src="servizio1.jpg" alt="Servizio 1">
+          <img src="servizio1.jpg" alt="Valutazioni Ambientali">
           <h3>Valutazioni Ambientali</h3>
-          <p>Supporto per la valutazione di impatto ambientale e la gestione delle pratiche normative.</p>
+          <p>Supporto per la valutazione di impatto ambientale e gestione delle pratiche normative.</p>
         </div>
         <div class="service-card">
-          <img src="servizio2.jpg" alt="Servizio 2">
+          <img src="servizio2.jpg" alt="Analisi e Monitoraggio">
           <h3>Analisi e Monitoraggio</h3>
-          <p>Analisi ambientali dettagliate e monitoraggio per garantire il rispetto delle normative.</p>
+          <p>Analisi ambientali dettagliate e monitoraggi per garantire il rispetto delle normative.</p>
         </div>
         <div class="service-card">
-          <img src="servizio3.jpg" alt="Servizio 3">
+          <img src="servizio3.jpg" alt="Certificazioni ISO 14001">
           <h3>Certificazioni ISO 14001</h3>
           <p>Consulenza per ottenere le certificazioni di qualità ambientale più richieste.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Sezione Testimonial (opzionale) -->
+    <section class="section">
+      <h2>Cosa Dicono di Noi</h2>
+      <div class="testimonial">
+        <p>"Un team di professionisti competenti e affidabili. Grazie al loro supporto abbiamo ottenuto la certificazione ambientale con successo!"</p>
+        <p>— Cliente Soddisfatto</p>
       </div>
     </section>
   </main>
@@ -168,6 +60,5 @@
   <footer>
     &copy; 2025 Studio di Consulenza Ambientale | Tutti i diritti riservati
   </footer>
-
 </body>
 </html>
