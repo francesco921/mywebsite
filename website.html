@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>La Mia Pagina Colorata</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #f5a623, #f76b1c);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 1em;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    .button.google {
+      background-color: #4285F4;
+    }
+
+    .button.google:hover {
+      background-color: #357ae8;
+    }
+
+    .button.openai {
+      background-color: #1a1a1a;
+    }
+
+    .button.openai:hover {
+      background-color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Benvenuto nella mia pagina!</h1>
+  <p>Questa è una pagina HTML colorata con pulsanti che ti portano a Google e OpenAI.</p>
+  <a href="https://www.google.com" class="button google" target="_blank">Vai su Google</a>
+  <a href="https://www.openai.com" class="button openai" target="_blank">Vai su OpenAI</a>
+</body>
+</html>
