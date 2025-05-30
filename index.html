@@ -11,16 +11,17 @@
   <img src="logo-eko.png" alt="Logo Studio EKOLOGIC">
 </header>
 
-
-
-
-  <nav>
+<nav>
+  <div class="menu-toggle">&#9776;</div> <!-- icona hamburger -->
+  <div class="nav-links">
     <a href="#">Home</a>
     <a href="#">Chi Siamo</a>
     <a href="#">Servizi</a>
     <a href="#">Progetti</a>
     <a href="#">Contatti</a>
-  </nav>
+  </div>
+</nav>
+
 
   <section class="hero">
     <h2>Soluzioni Ambientali Innovative</h2>
@@ -63,5 +64,14 @@
   <footer>
     &copy; 2025 Studio di Consulenza Ambientale | Tutti i diritti riservati
   </footer>
+  <script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
