@@ -12,31 +12,30 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
   background-color: #1F3B28;
   text-align: center;
-  padding: 20px;
+  padding: 15px 20px 5px 20px;  /* Ridotto il padding inferiore */
 }
 
 header img {
-  max-width: 200px;   /* Logo ridimensionabile su mobile */
+  max-width: 200px;
   width: 100%;
   height: auto;
 }
 
-/* Navbar */
 nav {
   background-color: #1F3B28;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding-top: 5px;  /* Ridotto lo spazio sopra i link */
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
-  padding: 15px 20px;
+  padding: 10px 15px;  /* Leggermente più compatto */
   display: block;
   transition: background-color 0.3s;
 }
@@ -44,6 +43,7 @@ nav a {
 nav a:hover {
   background-color: #16371f;
 }
+
 
 /* Hero Section */
 .hero {
