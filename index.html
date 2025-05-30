@@ -7,156 +7,167 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom right, #2ecc71, #ffffff);
+      font-family: 'Arial', sans-serif;
       color: #333;
+      background-color: #ffffff;
     }
 
     header {
-      background-color: #27ae60;
-      color: white;
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 20px;
       text-align: center;
-      padding: 20px 0;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.5rem;
     }
 
-    main {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 5px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    nav {
+      background-color: #34495e;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    .tractor-image {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      color: #27ae60;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      background-color: #27ae60;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-      margin-top: 20px;
-    }
-
-    .button {
-      display: inline-block;
-      background-color: #2ecc71;
-      color: white;
-      padding: 12px 25px;
+    nav a {
+      color: #fff;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 15px;
+      padding: 15px 20px;
+      display: block;
       transition: background-color 0.3s;
     }
 
-    .button:hover {
-      background-color: #27ae60;
+    nav a:hover {
+      background-color: #2c3e50;
     }
 
-    /* WhatsApp Floating Button */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
+    .hero {
+      background: url('hero-image.jpg') center/cover no-repeat;
+      color: white;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      z-index: 100;
-      animation: bounce 2s infinite;
-      text-decoration: none;
+      padding: 100px 20px;
     }
 
-    .whatsapp-float:hover {
-      background-color: #20b354;
+    .hero h2 {
+      font-size: 2rem;
+      margin: 0 0 20px;
     }
 
-    .whatsapp-float img {
-      width: 35px;
-      height: 35px;
-      margin-top: 12px;
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.1rem;
     }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .service-card {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1 1 300px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .service-card h3 {
+      margin-top: 15px;
+      color: #2c3e50;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 60px 20px;
       }
-
-      main {
-        padding: 15px;
+      .services {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Studio di Consulenza Ambientale</h1>
   </header>
 
-  <main>
-    <img src="tractor-2905488_1280.jpg" alt="Trattore John Deere" class="tractor-image">
-    
-    <section id="chi-siamo">
-      <h2>Chi Siamo</h2>
-      <p>
-        Siamo uno studio di consulenza ambientale specializzato nell’assistenza alle aziende per la gestione sostenibile delle attività agricole e industriali. Supportiamo i nostri clienti nel rispetto delle normative e nel miglioramento delle performance ambientali.
-      </p>
-    </section>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Chi Siamo</a>
+    <a href="#">Servizi</a>
+    <a href="#">Progetti</a>
+    <a href="#">Contatti</a>
+  </nav>
 
-    <section id="servizi">
-      <h2>Servizi Offerti</h2>
-      <ul>
-        <li>Valutazioni di impatto ambientale</li>
-        <li>Analisi e monitoraggi ambientali</li>
-        <li>Certificazioni ISO 14001</li>
-        <li>Supporto per pratiche agricole sostenibili</li>
-        <li>Formazione e sensibilizzazione ambientale</li>
-      </ul>
-      <a href="#contatti" class="button">Contattaci Ora</a>
-    </section>
+  <section class="hero">
+    <h2>Soluzioni Ambientali Innovative</h2>
+    <p>Aiutiamo le aziende a rispettare le normative ambientali e a migliorare la sostenibilità delle proprie attività.</p>
+    <a href="#" style="background:#27ae60; padding: 10px 20px; border-radius:5px; color:white; text-decoration:none; display:inline-block; margin-top:20px;">Contattaci Ora</a>
+  </section>
 
-    <section id="contatti">
-      <h2>Contatti</h2>
-      <p>
-        📧 Email: <a href="mailto:info@studioconsulenza.it">info@studioconsulenza.it</a><br>
-        ☎️ Telefono: +39 0123 456789<br>
-        📍 Indirizzo: Via Ambiente 123, Milano
-      </p>
+  <main class="container">
+    <section class="section">
+      <h2>I Nostri Servizi</h2>
+      <div class="services">
+        <div class="service-card">
+          <img src="servizio1.jpg" alt="Servizio 1">
+          <h3>Valutazioni Ambientali</h3>
+          <p>Supporto per la valutazione di impatto ambientale e la gestione delle pratiche normative.</p>
+        </div>
+        <div class="service-card">
+          <img src="servizio2.jpg" alt="Servizio 2">
+          <h3>Analisi e Monitoraggio</h3>
+          <p>Analisi ambientali dettagliate e monitoraggio per garantire il rispetto delle normative.</p>
+        </div>
+        <div class="service-card">
+          <img src="servizio3.jpg" alt="Servizio 3">
+          <h3>Certificazioni ISO 14001</h3>
+          <p>Consulenza per ottenere le certificazioni di qualità ambientale più richieste.</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- WhatsApp Floating Icon -->
-  <a href="https://wa.me/393337836402" class="whatsapp-float" target="_blank" aria-label="Chatta con noi su WhatsApp">
-    <img src="whatsapp-icon.png" alt="WhatsApp">
-  </a>
-
   <footer>
-    &copy; 2025 Studio di Consulenza Ambientale. Tutti i diritti riservati.
+    &copy; 2025 Studio di Consulenza Ambientale | Tutti i diritti riservati
   </footer>
+
 </body>
 </html>
